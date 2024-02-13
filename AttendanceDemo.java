@@ -8,7 +8,7 @@ public class AttendanceDemo{
 		int totalAbsent = 0;
 		int curretRollNo = firstRoll;
 		while(curretRollNo>0){
-			System.out.println("Rollno "+curretRollNo);
+			System.out.println("Rollno ="+curretRollNo);
 			int temp = sc.nextInt();
 			if(temp==0){
 				absentNos[totalAbsent] = curretRollNo;
