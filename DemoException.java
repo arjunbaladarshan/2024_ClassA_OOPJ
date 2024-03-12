@@ -11,6 +11,9 @@ public class DemoException{
 		}catch (Exception e) {
 			e.printStackTrace();
 		}
+		finally{
+			
+		}
 		
 	}
 
