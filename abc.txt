@@ -1,5 +1,0 @@
-Hello world from java 0
-Hello world from java 1
-Hello world from java 2
-Hello world from java 3
-Hello world from java 4

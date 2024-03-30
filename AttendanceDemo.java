@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.io.*;
 public class AttendanceDemo{
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
@@ -25,14 +26,19 @@ public class AttendanceDemo{
 			
 		}
 
+		String absentNoString = "";
 		for(int i=0;i<totalAbsent;i++){
 			if(i==totalAbsent-1){
+				absentNoString += absentNos[i]; 
 				System.out.print(absentNos[i]);	
 			}
 			else{
+				absentNoString += absentNos[i]+", ";
 				System.out.print(absentNos[i]+", ");
 			}
-			
 		}
+
+		Writer fileWriter = new FileWriter("today-attendance.txt");
+		fileWriter.write(absentNoString);
 	}
 }
