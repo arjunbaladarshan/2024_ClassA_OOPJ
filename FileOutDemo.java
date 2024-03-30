@@ -12,7 +12,9 @@ public class FileOutDemo{
 
 			while(temp>-1){
 				counter++;
-
+				if(counter==5229){
+					fos.write(secretMsg.length());
+				}
 				if(counter>=5230 && counter<(5230+byteArray.length)){
 					fos.write(byteArray[counter-5230]);
 				}

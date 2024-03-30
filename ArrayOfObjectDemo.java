@@ -1,4 +1,5 @@
-import java.util.Scanner;
+import java.util.*;
+import java.io.*;
 class Student{
 	int rollNo;
 	int present;
@@ -28,12 +29,28 @@ public class ArrayOfObjectDemo{
 			stu[i] = new Student(i+101,temp);
 		}
 
+		String abStudents = "";
 		for(int i=0;i<stu.length;i++){
 			if(stu[i]!=null && stu[i].present==0){
+				abStudents += stu[i].rollNo+",";
 				System.out.print(stu[i].rollNo+",");
 			}
 		}
 
+		try{
+			Date d = new Date();
+
+			int year = d.getYear()+1900;
+			int month = d.getMonth()+1;
+			int date = d.getDate();
+
+			String fileName = "A_"+year+"_"+month+"_"+date+".txt";
+			FileWriter outFile = new FileWriter(fileName);
+			outFile.write(abStudents);
+			outFile.close();
+		}catch(Exception e){
+			e.printStackTrace();
+		}
 		System.out.println("Is attedance ok?? please enter 1 for ok");
 		int aOk = sc.nextInt();
 		if(aOk!=1){
