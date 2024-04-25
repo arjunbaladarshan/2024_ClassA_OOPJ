@@ -11,7 +11,6 @@ class Box{
 
 	public void printVolume(){
 		int ans = width * breadth * height;
-		System.out.println("Ans = "+ans);
 	}
 
 }
